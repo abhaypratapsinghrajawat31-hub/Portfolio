@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================
     const typewriterEl = document.getElementById('typewriter');
     const titles = [
-        'Full Stack Developer',
-        'IoT Enthusiast',
-        'React.js Developer',
-        'Problem Solver',
-        'CSE Student @ LPU',
-        'Tech Innovator'
+        'AI & ML Enthusiast',
+        'Data Science Explorer',
+        'IoT Developer',
+        'Python Developer',
+        'B.Tech AI/ML @ LPU',
+        'Problem Solver'
     ];
     let titleIndex = 0;
     let charIndex = 0;
