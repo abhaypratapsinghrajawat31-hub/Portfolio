@@ -1099,15 +1099,11 @@ ul {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 32px 24px;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -1123,16 +1119,76 @@ ul {
     background: var(--gradient-1);
     opacity: 0;
     transition: var(--transition);
+    z-index: 2;
 }
 
 .certificate-card:hover {
     border-color: var(--border-hover);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .certificate-card:hover::before {
     opacity: 1;
+}
+
+.certificate-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #1a1a2e;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top center;
+    transition: var(--transition-slow);
+    display: block;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.05);
+    filter: brightness(0.4);
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transition: var(--transition);
+    background: rgba(10, 10, 15, 0.5);
+    z-index: 1;
+}
+
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
+}
+
+.certificate-overlay i {
+    font-size: 1.5rem;
+    color: var(--accent-light);
+}
+
+.certificate-overlay span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.certificate-card .certificate-content {
+    padding: 20px 24px;
+    text-align: center;
 }
 
 .certificate-icon {
