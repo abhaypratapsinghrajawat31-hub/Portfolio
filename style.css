@@ -507,8 +507,8 @@ ul {
 
 .avatar-container {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 360px;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -516,8 +516,8 @@ ul {
 
 .avatar-ring {
     position: absolute;
-    width: 220px;
-    height: 220px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     border: 2px solid transparent;
     background-image: var(--gradient-1);
@@ -534,8 +534,8 @@ ul {
 }
 
 .avatar-photo {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid var(--accent);
