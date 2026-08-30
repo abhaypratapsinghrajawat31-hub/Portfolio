@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'AI & ML Enthusiast',
         'Data Science Explorer',
         'Python Developer',
-        'B.Tech AI/ML @ LPU',
         'Problem Solver'
     ];
     let titleIndex = 0;
