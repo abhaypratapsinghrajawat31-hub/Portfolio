@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const titles = [
         'AI & ML Enthusiast',
         'Data Science Explorer',
-        'IoT Developer',
         'Python Developer',
         'B.Tech AI/ML @ LPU',
         'Problem Solver'
