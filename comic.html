@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay Pratap Singh - Comic Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0d1321; font-family: 'Poppins', sans-serif; color: white; min-height: 100vh; padding: 40px 20px; }
+        .comic-board { max-width: 1200px; margin: 0 auto; border: 4px solid #f9d71c; border-radius: 12px; padding: 40px; background-color: #111a2d; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+        .header { text-align: center; margin-bottom: 40px; border-bottom: 2px dashed #3a4a6b; padding-bottom: 20px; }
+        .header h1 { font-family: 'Bangers', cursive; color: #f9d71c; font-size: 3.5rem; letter-spacing: 2px; text-shadow: 2px 2px 0px #000; margin-bottom: 10px; }
+        .header p { color: #4db8ff; font-size: 1.2rem; font-weight: 600; }
+        .comic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .comic-panel { background: white; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; border: 3px solid #000; box-shadow: 4px 4px 0px #000; transition: transform 0.2s ease; }
+        .comic-panel:hover { transform: translateY(-5px); }
+        .panel-header { background-color: #f9d71c; color: #000; font-weight: 800; text-align: center; padding: 10px; font-size: 1.1rem; border-bottom: 3px solid #000; }
+        .panel-image { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-bottom: 3px solid #000; }
+        .panel-footer { padding: 15px; background-color: white; color: #000; text-align: center; font-size: 0.9rem; font-weight: 600; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+        .btn-print { display: block; width: fit-content; margin: 0 auto; background-color: #10b981; color: white; border: none; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4); transition: background 0.2s; text-decoration: none; }
+        .btn-print:hover { background-color: #059669; }
+        .btn-back { position: absolute; top: 20px; left: 20px; color: #f9d71c; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .btn-back:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .comic-board { padding: 20px; } .header h1 { font-size: 2.5rem; } }
+        @media print { body { background: white; padding: 0; } .comic-board { border: none; box-shadow: none; max-width: 100%; padding: 0; background: white; } .btn-print, .btn-back { display: none; } .header h1 { color: #000; text-shadow: none; } .comic-grid { page-break-inside: avoid; } }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    <div class="comic-board">
+        <div class="header">
+            <h1>ABHAY PRATAP SINGH — MY PORTFOLIO COMIC STRIP</h1>
+            <p>B.Tech Computer Science and Engineering | Lovely Professional University | CGPA: 9.4</p>
+        </div>
+        <div class="comic-grid">
+            <div class="comic-panel"><div class="panel-header">① MY INTRODUCTION</div><img src="comics/1_introduction.jpg" alt="Introduction" class="panel-image"><div class="panel-footer">Abhay Pratap Singh - B.Tech CSE (AI & ML) at LPU</div></div>
+            <div class="comic-panel"><div class="panel-header">② MY EDUCATION</div><img src="comics/2_education.jpg" alt="Education" class="panel-image"><div class="panel-footer">LPU B.Tech (CGPA: 9.4) | Class XII (79.8%) | Class X (84.2%)</div></div>
+            <div class="comic-panel"><div class="panel-header">③ MY SKILLS</div><img src="comics/3_skills.jpg" alt="Skills" class="panel-image"><div class="panel-footer">C, C++, Python, JavaScript, React.js, MySQL, Pandas</div></div>
+            <div class="comic-panel"><div class="panel-header">④ MY PROJECTS</div><img src="comics/4_projects.jpg" alt="Projects" class="panel-image"><div class="panel-footer">Smart Drip Irrigation System (IoT) | Environmental Alert System</div></div>
+            <div class="comic-panel"><div class="panel-header">⑤ MY ACHIEVEMENTS</div><img src="comics/5_achievements.jpg" alt="Achievements" class="panel-image"><div class="panel-footer">Certified in AI (Infosys), Python (Saylor), C Programming (Neo Colab)</div></div>
+            <div class="comic-panel"><div class="panel-header">⑥ MY STRENGTHS</div><img src="comics/6_strengths.jpg" alt="Strengths" class="panel-image"><div class="panel-footer">Problem Solver, Adaptable, Team Player, Time Manager</div></div>
+            <div class="comic-panel"><div class="panel-header">⑦ MY GOAL</div><img src="comics/7_goal.jpg" alt="Goal" class="panel-image"><div class="panel-footer">Goal: AI & Machine Learning Engineer / Software Developer</div></div>
+        </div>
+        <button class="btn-print" onclick="window.print()"><i class="fas fa-print"></i> Print Comic Presentation Board</button>
+    </div>
+</body>
+</html>
